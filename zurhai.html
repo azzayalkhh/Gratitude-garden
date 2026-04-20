@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Монгол Зурхай</title>
+  <link rel="stylesheet" href="zurhai.css" />
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+
+  <main class="container">
+    <header class="site-header">
+      <div class="moon-icon">☽</div>
+      <h1>Монгол Зурхай</h1>
+      <p class="subtitle">Одод таны тухай юу хэлэх вэ?</p>
+    </header>
+
+    <section class="form-card" id="formSection">
+      <form id="zurhaiform">
+        <div class="field">
+          <label for="name">Таны нэр</label>
+          <input type="text" id="name" placeholder="Нэрээ оруулна уу" required autocomplete="off" />
+        </div>
+
+        <div class="field">
+          <label>Төрсөн огноо</label>
+          <div class="date-row">
+            <div class="date-field">
+              <select id="year" required>
+                <option value="">Жил</option>
+              </select>
+            </div>
+            <div class="date-field">
+              <select id="month" required>
+                <option value="">Сар</option>
+                <option value="1">1-р сар</option>
+                <option value="2">2-р сар</option>
+                <option value="3">3-р сар</option>
+                <option value="4">4-р сар</option>
+                <option value="5">5-р сар</option>
+                <option value="6">6-р сар</option>
+                <option value="7">7-р сар</option>
+                <option value="8">8-р сар</option>
+                <option value="9">9-р сар</option>
+                <option value="10">10-р сар</option>
+                <option value="11">11-р сар</option>
+                <option value="12">12-р сар</option>
+              </select>
+            </div>
+            <div class="date-field">
+              <select id="day" required>
+                <option value="">Өдөр</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          <span class="btn-icon">✦</span> Зурхай үзэх
+        </button>
+      </form>
+    </section>
+
+    <section class="result-card hidden" id="resultSection">
+      <button class="btn-back" id="backBtn">← Буцах</button>
+
+      <div class="sign-header">
+        <div class="sign-symbol" id="signSymbol"></div>
+        <div class="sign-title">
+          <div class="greeting" id="greeting"></div>
+          <h2 id="signName"></h2>
+          <div class="sign-dates" id="signDates"></div>
+        </div>
+      </div>
+
+      <div class="element-badge" id="elementBadge"></div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon">🌟</div>
+          <h3>Зан чанар</h3>
+          <p id="personality"></p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">💼</div>
+          <h3>Карьер</h3>
+          <p id="career"></p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">❤️</div>
+          <h3>Хайр дурлал</h3>
+          <p id="love"></p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🌿</div>
+          <h3>Эрүүл мэнд</h3>
+          <p id="health"></p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">💰</div>
+          <h3>Санхүү</h3>
+          <p id="finance"></p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🔮</div>
+          <h3>Энэ жилийн зөвлөгөө</h3>
+          <p id="advice"></p>
+        </div>
+      </div>
+
+      <div class="traits-section">
+        <h3>Хүч чадал ба сул тал</h3>
+        <div class="traits-row">
+          <div class="traits-col">
+            <h4>✦ Давуу тал</h4>
+            <ul id="strengths"></ul>
+          </div>
+          <div class="traits-col">
+            <h4>✧ Сул тал</h4>
+            <ul id="weaknesses"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="compat-section">
+        <h3>Нийцтэй тэмдгүүд</h3>
+        <div class="compat-list" id="compatList"></div>
+      </div>
+
+      <div class="lucky-section">
+        <div class="lucky-item">
+          <span class="lucky-label">Азтай тоо</span>
+          <span class="lucky-value" id="luckyNum"></span>
+        </div>
+        <div class="lucky-item">
+          <span class="lucky-label">Азтай өнгө</span>
+          <span class="lucky-value" id="luckyColor"></span>
+        </div>
+        <div class="lucky-item">
+          <span class="lucky-label">Эрхэт гариг</span>
+          <span class="lucky-value" id="rulingPlanet"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="zurhai.js"></script>
+</body>
+</html>
