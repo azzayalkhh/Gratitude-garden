@@ -36,7 +36,7 @@
       msg.className = 'message hidden';
 
       const body = {
-        name: form.name.value.trim(),
+        name: document.getElementById('name').value.trim(),
         email: form.email.value.trim(),
         password: form.password.value,
       };
@@ -58,7 +58,7 @@
           msg.className = 'message error';
         }
       } catch {
-        msg.textContent = 'Network error. Please try again.';
+        msg.textContent = 'Сүлжээний алдаа гарлаа. Дахин оролдоно уу.';
         msg.className = 'message error';
       }
     });

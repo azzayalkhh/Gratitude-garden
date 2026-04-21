@@ -1,2 +1,6 @@
 node_modules/
 users.db
+gratitude.db
+.gratitude_secret
+__pycache__/
+*.pyc
